@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Visualization</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<style type="text/css">
+  .h-divider{
+   margin-top:5px;
+   margin-bottom:5px;
+   height:1px;
+   width:100%;
+   border-top:1px solid gray;
+  }
+  </style>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 jumbotron text-center">
+<h1>New York Times Best Sellers in 2020</h1>
+<p>Welcome to our page! Here we explore titles authors and descriptions of some of the best selling books this year.</p>
+    </div>
+  </div>
+<div class="row">
+  <div class="col">
+    <div id="word-cloud"></div>
+  </div>
+  <div class="card border-info mb-3" style="width: 35rem;">
+    <h2 class="card-header">Our Data</h2>
+    <div class="card-body">
+      <h5 class="card-title">New York Times Best Sellers</h5>
+      <h6 class="card-subtitle text-muted">Our Data is from two lists, and includes Best Sellers from January 2020 to October 2020</h6>
+    </div>
+      <img src="../static/images/reading-challenge-hero.jpg" alt="books"  width="100%" height="300">
+    </svg>
+    <div class="card-body">
+      <p class="card-text">The word cloud to the left is cycling through descriptions of each book our database.</p>
+      <div class="h-divider">
+      </div>
+      <p class="card-text">Although most of our data is from the New York Times Books API, we also pulled in ratings data from the GoodReads API</p>
+      <div class="h-divider">
+      </div>
+      <p class="card-text">Our goal was to examine some of the best selling books of this year, especially as the COVID-19 pandemic increased the popularity of reading.
+        <br></br>The following are visualizations of our data: <button type="button" class="btn btn-info disabled"><a href="dashboard" target="_blank" class="card-link">Dashboard</a></button></p>
+        
+    </div>
+    <div class="h-divider">
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Bar Graph: Pulishers and Number of Best Sellers</li>
+      <li class="list-group-item">Scatter Plot: Books, Ratings, and Weeks on the List</li>
+      <li class="list-group-item">Drop Down Menu of All Books returning Descriptions</li>
+    </ul>
+    <div class="card-body">
+      <button type="button" class="btn btn-danger disabled"><a href="https://www.nytimes.com/books/best-sellers/" target="_blank" class="card-link">NYT Best Sellers</a></button>
+      <button type="button" class="btn btn-danger disabled"><a href="https://developers.nytimes.com/" target="_blank" class="card-link">New York Times Books API</a></button>
+      <button type="button" class="btn btn-danger disabled"><a href="https://www.goodreads.com/api" target="_blank" class="card-link">GoodReads API</a></button>
+    </div>
+    <div class="card-footer text-muted">
+      Adela Garza and Juliet Cisneros
+    </div>
+</div>
+
+
+  <div class="h-divider">
+  </div>
+
+<div class = "row">
+  <div class="col-8">
+    <div id="bar"></div>
+  </div>
+</div>
+<div class="h-divider">
+</div>
+<div class="row">
+  <div class="col-xs-12  col-md-9">
+    <div id="table">
+      <!-- We append our chart here. -->
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"/></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"/></script>
+<script src="../static/js/app.js"></script>
+
+</body>
+</html>
