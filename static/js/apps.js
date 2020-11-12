@@ -126,7 +126,7 @@ function updateToolTip(chosenX, circlesGroup) {
       .attr('class', 'popover')
       .offset([80, -60])
       .html(function(d) {
-          return (`Title ${d.title} <div class="h-divider"></div> Author: ${d.author} <div class="h-divider"></div> # Number of Weeks: ${d.weeks}<div class="h-divider"></div> Book Rating: ${d.rating}`);
+          return (`<strong>Title ${d.title}</strong> <div class="h-divider"></div> Author: ${d.author} <div class="h-divider"></div> # Number of Weeks: ${d.weeks}<div class="h-divider"></div> Book Rating: ${d.rating}`);
       });
   
   circlesGroup.call(toolTip);
